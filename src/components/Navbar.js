@@ -21,7 +21,7 @@ export default function Navbar() {
 
   function logout() {
     localStorage.clear();
-    window.location.reload(true);
+    window.location.href = "/";
   }
   return (
     <nav className="flex items-center justify-between flex-wrap p-1 pl-8 pr-8 shadow-sm">
