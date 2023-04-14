@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import { CartContext } from "@/contexts/CartContext";
+import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
@@ -25,6 +26,16 @@ export default function ProductDatails({ product }) {
 
   return (
     <>
+      <Head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{product.name}</title>
+        <meta name="description" content={product.description} />
+        <meta
+          name="keywords"
+          content="home decor, furniture, lighting, decorative accessories"
+        />
+      </Head>
       <Navbar />
       <div className="flex min-h-screen flex-col justify-between">
         <div className="mx-auto mt-16 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">

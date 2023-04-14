@@ -1,6 +1,7 @@
 import ProductCard from "@/components/ProductCard";
 import Header from "../components/Header";
 import { useRef } from "react";
+import Head from "next/head";
 
 export default function Home({ data }) {
   let productsRef = useRef();
@@ -14,6 +15,19 @@ export default function Home({ data }) {
 
   return (
     <>
+      <Head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Home Decor Products - The Home Decor</title>
+        <meta
+          name="description"
+          content="Explore a wide range of stylish home decor products at The Home Decor. Shop furniture, lighting, and decor for your home. Affordable prices, fast shipping, and excellent customer service."
+        />
+        <meta
+          name="keywords"
+          content="home decor, furniture, lighting, decorative accessories"
+        />
+      </Head>
       <Header scrollHandler={scrollHandler} />
       <div className="min-h-screen mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="sm:py-15 mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">

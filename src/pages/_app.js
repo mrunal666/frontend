@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import Footer from "../components/Footer";
-import Head from "next/head";
 import { Montserrat } from "next/font/google";
 import { CartContextProvider } from "@/contexts/CartContext";
 import { Elements } from "@stripe/react-stripe-js";
@@ -18,15 +17,6 @@ export default function App({ Component, pageProps }) {
   return (
     <CartContextProvider>
       <Elements stripe={stripePromise}>
-        <Head>
-          <meta charset="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <title>The Home Decor</title>
-          <meta
-            name="description"
-            content="Make your home beautiful using our Home Decor."
-          />
-        </Head>
         <main class={montserrat.className}>
           <Component {...pageProps} />
           <Footer />
